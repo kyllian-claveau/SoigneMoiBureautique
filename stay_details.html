@@ -7,15 +7,26 @@
 <link rel="icon" type="image/png" sizes="16x16" href="https://soignemoiproject.online/images/favicon-16x16.png">
     <title>Séjour</title>
     <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-		<style>
-	.logo {
+    <style>
+        .btn-primary {
+            background-color: #481C4B;
+            border-color: #481C4B;
+        }
+        .btn-primary:hover {
+            background-color: #E01D5B;
+            border-color: #E01D5B;
+        }
+        .bg-secondary{
+            background-color: #E01D5B;
+        }
+        .logo {
             max-width: 100px;
         }
-	</style>
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
-	<header class="bg-blue-600 text-white p-4 flex justify-between items-center shadow-md">
+	<header class="bg-secondary text-white p-4 flex justify-between items-center shadow-md">
 	<div class="flex items-center">
 	<button id="back-button" class="mr-4 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -27,7 +38,7 @@
         <div class="flex items-center">
 		  <h1 class="text-xl font-semibold">Liste des Séjours</h1>
         </div>
-        <button id="logout-button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        <button id="logout-button" class="btn-primary btn-primary:hover text-white font-bold py-2 px-4 rounded">
             Déconnexion
         </button>
     </header>

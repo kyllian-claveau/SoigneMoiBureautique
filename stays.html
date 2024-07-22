@@ -12,17 +12,28 @@
 	.logo {
             max-width: 100px;
         }
+     .btn-primary {
+         background-color: #481C4B;
+         border-color: #481C4B;
+     }
+    .btn-primary:hover {
+        background-color: #E01D5B;
+        border-color: #E01D5B;
+    }
+    .bg-secondary{
+        background-color: #E01D5B;
+    }
 	</style>
 </head>
 <body class="bg-gray-100">
-    <header class="bg-blue-600 text-white p-4 flex justify-between items-center shadow-md">
+    <header class="bg-secondary text-white p-4 flex justify-between items-center shadow-md">
 	<div class="flex items-center">
           <img src="https://soignemoiproject.online/images/logo.png" alt="Logo" class="logo">
         </div>
         <div class="flex items-center">
             <h1 class="text-xl font-semibold">Liste des Séjours</h1>
         </div>
-        <button id="logout-button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+        <button id="logout-button" class="btn-primary btn-primary:hover text-white font-bold py-2 px-4 rounded">
             Déconnexion
         </button>
     </header>
