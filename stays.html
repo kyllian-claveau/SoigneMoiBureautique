@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://soignemoiproject.online/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://soignemoiproject.online/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://soignemoiproject.online/images/favicon-16x16.png">
+    <title>Liste des Séjours</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+	<style>
+	.logo {
+            max-width: 100px;
+        }
+	</style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-blue-600 text-white p-4 flex justify-between items-center shadow-md">
+	<div class="flex items-center">
+          <img src="https://soignemoiproject.online/images/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="flex items-center">
+            <h1 class="text-xl font-semibold">Liste des Séjours</h1>
+        </div>
+        <button id="logout-button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+            Déconnexion
+        </button>
+    </header>
+    <div class="container mx-auto mt-8 p-4">
+        <div id="stay-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </div>
+
+    <script>
+        document.getElementById('logout-button').addEventListener('click', () => {
+            localStorage.removeItem('authToken');
+            window.location.href = 'index.html';
+        });
+    </script>
+    <script src="stays_renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "name": "SoigneMoiForSecretary",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^13.1.7",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "js-cookie": "^3.0.5"
+  },
+  "build": {
+    "appId": "com.soignemoiforsecretary",
+    "win": {
+      "target": "nsis",
+      "icon": "icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "icons/installerIcon.ico",
+      "uninstallerIcon": "icons/installerIcon.ico",
+      "installerHeaderIcon": "icons/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "SoigneMoi pour secretaire"
+    }
+  }
+}
