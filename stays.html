@@ -3,50 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <link rel="apple-touch-icon" sizes="180x180" href="https://soignemoiproject.online/images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://soignemoiproject.online/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://soignemoiproject.online/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://soignemoiproject.online/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://soignemoiproject.online/images/favicon-16x16.png">
     <title>Liste des Séjours</title>
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-	<style>
-	.logo {
+    <style>
+        .logo {
             max-width: 100px;
         }
-     .btn-primary {
-         background-color: #481C4B;
-         border-color: #481C4B;
-     }
-    .btn-primary:hover {
-        background-color: #E01D5B;
-        border-color: #E01D5B;
-    }
-    .bg-secondary{
-        background-color: #E01D5B;
-    }
-	</style>
+        .btn-primary {
+            background-color: #481C4B;
+            border-color: #481C4B;
+        }
+        .btn-primary:hover {
+            background-color: #D60849;
+            border-color: #D60849
+        }
+        .bg-secondary {
+            background-color: #E01D5B;
+        }
+        .card:hover {
+            cursor: pointer;
+            background-color: #f3f4f6; /* Tailwind's gray-100 */
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
-    <header class="bg-secondary text-white p-4 flex justify-between items-center shadow-md">
-	<div class="flex items-center">
-          <img src="https://soignemoiproject.online/images/logo.png" alt="Logo" class="logo">
-        </div>
-        <div class="flex items-center">
-            <h1 class="text-xl font-semibold">Liste des Séjours</h1>
-        </div>
-        <button id="logout-button" class="btn-primary btn-primary:hover text-white font-bold py-2 px-4 rounded">
+<header class="bg-secondary text-white p-4 flex justify-between items-center shadow-md">
+    <div class="flex items-center">
+        <img src="https://soignemoiproject.online/images/logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="flex items-center">
+        <h1 class="text-xl font-semibold">Liste des Séjours</h1>
+    </div>
+    <div class="flex items-center space-x-4">
+        <button id="reload-button" class="btn-primary text-white font-bold py-2 px-4 rounded">
+            Recharger
+        </button>
+        <button id="logout-button" class="btn-primary text-white font-bold py-2 px-4 rounded">
             Déconnexion
         </button>
-    </header>
-    <div class="container mx-auto mt-8 p-4">
-        <div id="stay-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
     </div>
+</header>
+<div class="container mx-auto mt-8 p-4">
+    <div id="stay-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+</div>
 
-    <script>
-        document.getElementById('logout-button').addEventListener('click', () => {
-            localStorage.removeItem('authToken');
-            window.location.href = 'index.html';
-        });
-    </script>
-    <script src="stays_renderer.js"></script>
+<script src="stays_renderer.js"></script>
 </body>
 </html>
